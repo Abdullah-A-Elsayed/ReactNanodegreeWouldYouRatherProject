@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../App.css";
+import { connect } from "react-redux";
+import { handleInitialData } from "../actions/shared";
 
-function App() {
+function App({ dispatch }) {
+  useEffect(() => {
+    dispatch(handleInitialData());
+  });
+
   return <div>Hello World</div>;
 }
-
-export default App;
+const mapStateToProps = (state) => ({
+  authedUser: state.authedUser,
+});
+export default connect(mapStateToProps)(App);

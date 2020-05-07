@@ -6,7 +6,7 @@ import {
 } from "./_DATA";
 
 export const getInitialData = () => {
-  return Promise.all([_getUsers, _getQuestions]).then(([users, polls]) => ({
+  return Promise.all([_getUsers(), _getQuestions()]).then(([users, polls]) => ({
     users,
     polls,
   }));

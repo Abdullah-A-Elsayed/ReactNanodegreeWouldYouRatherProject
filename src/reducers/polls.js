@@ -18,8 +18,8 @@ export default function (state = {}, action) {
         },
       };
     case USER_ADDS_NEW_POLL:
-      const { author, poll } = action;
-      return { ...state, [poll.id]: poll };
+      const { poll_ } = action;
+      return { ...state, [poll_.id]: poll_ };
     default:
       return state;
   }

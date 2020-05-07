@@ -18,12 +18,12 @@ export default function (state = {}, action) {
         },
       };
     case USER_ADDS_NEW_POLL:
-      const { author, poll } = action;
+      const { author_, poll_ } = action;
       return {
         ...state,
-        [author]: {
-          ...state[author],
-          questions: state[author]["questions"].concat([poll.id]),
+        [author_]: {
+          ...state[author_],
+          questions: state[author_]["questions"].concat([poll_.id]),
         },
       };
     default:

@@ -13,6 +13,13 @@ function App({ dispatch }) {
     const u = "tylermcginnis";
     dispatch(handleInitialData());
     dispatch(setAuthedUser(u));
+    dispatch(
+      handleAddNewPoll({
+        author: u,
+        optionOneText: "hhhhhh",
+        optionTwoText: "hhhhhhhuuuuuuuuu",
+      })
+    );
   });
 
   return <div>Hello World</div>;

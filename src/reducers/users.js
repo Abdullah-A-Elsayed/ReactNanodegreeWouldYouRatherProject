@@ -5,25 +5,22 @@ export default function (state = {}, action) {
     case RECEIVE_USERS:
       return action.users;
     case USER_ANSWERS_POLL:
-      const { author, poll } = action;
-      const { id, option } = poll;
       return {
         ...state,
-        [author]: {
-          ...state[author],
+        [action.author]: {
+          ...state[action.author],
           answers: {
-            ...state[author]["answers"],
-            [id]: option,
+            ...state[action.author]["answers"],
+            [action.poll.id]: action.poll.option,
           },
         },
       };
     case USER_ADDS_NEW_POLL:
-      const { author_, poll_ } = action;
       return {
         ...state,
-        [author_]: {
-          ...state[author_],
-          questions: state[author_]["questions"].concat([poll_.id]),
+        [action.author]: {
+          ...state[action.author],
+          questions: state[action.author]["questions"].concat([action.poll.id]),
         },
       };
     default:

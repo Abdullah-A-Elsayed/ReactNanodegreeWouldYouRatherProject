@@ -6,16 +6,17 @@ export const USER_ADDS_NEW_POLL = "USER_ADDS_NEW_POLL"; //shared as it will modi
 export const USER_ANSWERS_POLL = "USER_ANSWERS_POLL"; //shared as it will modify users state and polls state
 export const GET_INITIAL_DATA = "GET_INITIAL_DATA";
 
-export const userAddsNewPoll = (userID, poll) => ({
+export const userAddsNewPoll = (author, poll) => ({
   type: USER_ADDS_NEW_POLL,
-  userID,
+  author,
   poll,
 });
-export const userAnswersPoll = (userNAME, { id, option }) => ({
+export const userAnswersPoll = (author, { id, option }) => ({
   type: USER_ANSWERS_POLL,
-  userNAME,
+  author,
   poll: { id, option },
 });
+//---------------------------------------------------------------------------
 export const handleInitialData = () => {
   return (dispatch) => {
     return getInitialData().then(({ users, polls }) => {
@@ -24,22 +25,17 @@ export const handleInitialData = () => {
     });
   };
 };
-export const handleAddNewPoll = ({
-  optionOneText,
-  optionTwoText,
-  userID,
-  author,
-}) => {
+export const handleAddNewPoll = ({ optionOneText, optionTwoText, author }) => {
   //author is userNAME
   return (dispatch) => {
     saveQuestion({ optionOneText, optionTwoText, author }).then((q) => {
-      dispatch(userAddsNewPoll(userID, q));
+      dispatch(userAddsNewPoll(author, q));
     });
   };
 };
-export const handleAnswerPoll = ({ authedUser, userName, qid, answer }) => {
+export const handleAnswerPoll = ({ authedUser, qid, answer }) => {
   return (dispatch) => {
-    dispatch(userAnswersPoll(userName, { id: qid, option: answer }));
+    dispatch(userAnswersPoll(authedUser, { id: qid, option: answer }));
     saveQuestionAnswer({ authedUser, qid, answer });
   };
 };

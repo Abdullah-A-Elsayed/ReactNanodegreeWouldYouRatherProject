@@ -9,7 +9,8 @@ function NewPoll({ dispatch, authedUser }) {
   const [optionOne, setOptionOne] = useState("");
   const [optionTwo, setOptionTwo] = useState("");
   const history = useHistory();
-  const onPollSubmit = () => {
+  const onPollSubmit = (e) => {
+    e.preventDefault();
     if (!optionOne || !optionTwo) return alert("Both Options are required");
     dispatch(
       handleAddNewPoll({
@@ -28,32 +29,35 @@ function NewPoll({ dispatch, authedUser }) {
       >
         <p>Complete the question</p>
         <h3>Would you rather ...</h3>
-        <span className="p-float-label">
-          <InputText
-            id="optionOne"
-            value={optionOne}
-            onChange={(e) => setOptionOne(e.target.value)}
+        <form>
+          <span className="p-float-label">
+            <InputText
+              id="optionOne"
+              value={optionOne}
+              onChange={(e) => setOptionOne(e.target.value)}
+              className="fullWidth"
+            />
+            <label htmlFor="optionOne">Option One</label>
+          </span>
+          <h3 className="center">OR</h3>
+          <span className="p-float-label">
+            <InputText
+              id="optionTwo"
+              value={optionTwo}
+              onChange={(e) => setOptionTwo(e.target.value)}
+              className="fullWidth"
+            />
+            <label htmlFor="optionTwo">Option Two</label>
+          </span>
+          <br />
+          <Button
             className="fullWidth"
+            type="submit"
+            style={{ backgroundColor: "#00b2ff" }}
+            label="Submit"
+            onClick={(e) => onPollSubmit(e)}
           />
-          <label htmlFor="optionOne">Option One</label>
-        </span>
-        <h3 className="center">OR</h3>
-        <span className="p-float-label">
-          <InputText
-            id="optionTwo"
-            value={optionTwo}
-            onChange={(e) => setOptionTwo(e.target.value)}
-            className="fullWidth"
-          />
-          <label htmlFor="optionTwo">Option Two</label>
-        </span>
-        <br />
-        <Button
-          className="fullWidth"
-          style={{ backgroundColor: "#00b2ff" }}
-          label="Submit"
-          onClick={onPollSubmit}
-        />
+        </form>
       </Card>
     </div>
   );

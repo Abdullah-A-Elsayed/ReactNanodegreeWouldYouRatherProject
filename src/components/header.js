@@ -31,7 +31,7 @@ function Header({ dispatch, authedUser }) {
       <div className="headerSide">
         <span className="flexItem">
           {/* <i className="pi pi-user"></i> */}
-          <img src={authedUser.avatarURL} className="headerAvatar" />
+          <img src={`/${authedUser.avatarURL}`} className="headerAvatar" />
         </span>
         <span className="flexItem gold">
           <h3>{authedUser.name}</h3>

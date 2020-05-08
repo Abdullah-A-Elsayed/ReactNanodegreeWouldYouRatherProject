@@ -13,7 +13,7 @@ function Signin({ dispatch, users }) {
   };
   return (
     <div className="signinCard">
-      <Card header={<img alt="Card" src="images/signin.jpg" />}>
+      <Card header={<img alt="Card" src="/images/signin.jpg" />}>
         <h3>Pick a user to start the fun ...</h3>
         {Object.keys(users).length > 0 ? (
           <>

@@ -90,3 +90,21 @@ li.p-highlight a {
 .fullWidth {
   width: 100%;
 }
+.mediumUserAvatar {
+  height: 150px;
+  width: 150px;
+  border-radius: 150px;
+}
+.scoreCircle {
+  background-color: #00b2ff;
+  width: 60px;
+  height: 60px;
+  color: white;
+  display: flex;
+  border-radius: 60px;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+}

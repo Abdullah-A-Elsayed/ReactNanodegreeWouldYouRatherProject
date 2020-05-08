@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 import Header from "./header";
 import Homepage from "./homepage/";
 import AddQuestion from "./newPoll";
-import Leaderboard from "./leaderboard";
+import Leaderboard from "./leaderboard/leaderboard";
 import Question from "./poll/";
 export default function AuthedContent() {
   return (

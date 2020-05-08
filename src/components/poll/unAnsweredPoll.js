@@ -79,8 +79,8 @@ function AnsweredPoll({
 const mapStateToProps = ({ authedUser, polls, users }, { qid }) => {
   return {
     authedUser,
-    authorName: users[authedUser].name,
-    authorAvatar: users[authedUser].avatarURL,
+    authorName: users[polls[qid].author].name,
+    authorAvatar: users[polls[qid].author].avatarURL,
     qid,
     optionOne: polls[qid].optionOne.text,
     optionTwo: polls[qid].optionTwo.text,

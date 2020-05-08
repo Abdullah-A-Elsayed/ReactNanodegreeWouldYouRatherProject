@@ -5,9 +5,9 @@ import { Button } from "primereact/button";
 import { useHistory } from "react-router-dom";
 function PollHeader({ authorName, authorAvatar, pollText, qid }) {
   const history = useHistory();
-  const header = <div className="pollHeaderTitle">{`${authorName} asks:`}</div>;
+  const header = <div className="myCardTitle">{`${authorName} asks:`}</div>;
   return (
-    <Card className="pollHeader" header={header}>
+    <Card className="myCard" header={header}>
       <>
         <div style={{ display: "flex" }}>
           <div

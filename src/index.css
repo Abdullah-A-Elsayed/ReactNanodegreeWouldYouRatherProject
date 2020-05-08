@@ -72,11 +72,11 @@ header {
 li.p-highlight a {
   background-color: #00b2ff !important;
 }
-.pollHeader {
+.myCard {
   margin: 15px;
   border-radius: 5px;
 }
-.pollHeaderTitle {
+.myCardTitle {
   padding: 10px;
   background-color: #eee;
   font-weight: bold;
@@ -86,4 +86,7 @@ li.p-highlight a {
   background-color: white !important;
   color: #00b2ff !important;
   font-weight: 500;
+}
+.fullWidth {
+  width: 100%;
 }

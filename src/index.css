@@ -1,0 +1,50 @@
+@import "../node_modules/primereact/resources/themes/nova-light/theme.css";
+@import "../node_modules/primereact/resources/primereact.min.css";
+@import "../node_modules/primeicons/primeicons.css";
+body {
+  margin: 0;
+  padding: 0;
+}
+.signinCard {
+  width: 600px;
+  margin: 5% auto;
+}
+.signinCard img {
+  height: 150px;
+}
+.center {
+  text-align: center;
+}
+header {
+  margin: 0;
+  padding: 10px;
+  height: 70px;
+  background-color: #00b2ff;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerSide {
+  display: flex;
+  align-items: center;
+}
+.flexItem {
+  padding: 10px;
+  display: inline-block;
+}
+.active {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  display: inline-block;
+  border-bottom: 3px solid white;
+}
+.navlink {
+  color: white;
+}
+.gold {
+  color: gold;
+}
+.signout {
+  cursor: pointer;
+}

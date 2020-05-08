@@ -108,3 +108,6 @@ li.p-highlight a {
   justify-content: center;
   align-items: center;
 }
+.radioGroup {
+  margin-bottom: 15px;
+}

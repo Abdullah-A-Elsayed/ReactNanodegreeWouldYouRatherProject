@@ -10,16 +10,9 @@ function PollHeader({ authorName, authorAvatar, pollText, qid }) {
     <Card className="myCard" header={header}>
       <>
         <div style={{ display: "flex" }}>
-          <div
-            className="center"
-            style={{
-              width: "30%",
-              borderRight: "2px solid #eee",
-              marginRight: "15px",
-            }}
-          >
+          <div className="mediumAvatarConatainer">
             <img
-              style={{ width: "100px", height: "100px", borderRadius: "100px" }}
+              className="mediumUserAvatar"
               src={authorAvatar}
               alt={`${authorName} avatar`}
             />
@@ -27,6 +20,7 @@ function PollHeader({ authorName, authorAvatar, pollText, qid }) {
           <div
             style={{
               width: "70%",
+              padding: "20px",
             }}
           >
             <h4>Would you rather</h4>

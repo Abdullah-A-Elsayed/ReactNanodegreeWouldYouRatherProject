@@ -29,11 +29,12 @@ function AnsweredPoll({
         header={<div className="myCardTitle">{authorName} asks:</div>}
       >
         <div style={{ display: "flex" }}>
-          <div
-            style={{ width: "30%", borderRight: "2px solid #eee" }}
-            className="center"
-          >
-            <img src={authorAvatar} className="mediumUserAvatar" />
+          <div className="mediumAvatarConatainer">
+            <img
+              src={authorAvatar}
+              className="mediumUserAvatar"
+              alt={authorName}
+            />
           </div>
           <div style={{ width: "70%", padding: "20px" }}>
             <h3>Would You Rather ...</h3>

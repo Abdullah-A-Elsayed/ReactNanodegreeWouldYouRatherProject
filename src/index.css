@@ -95,6 +95,13 @@ li.p-highlight a {
   width: 150px;
   border-radius: 150px;
 }
+.mediumAvatarConatainer {
+  width: 30%;
+  border-right: 2px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .scoreCircle {
   background-color: #00b2ff;
   width: 60px;
@@ -110,4 +117,45 @@ li.p-highlight a {
 }
 .radioGroup {
   margin-bottom: 15px;
+}
+.p-progressbar {
+  border-radius: 5px;
+}
+.p-progressbar-label {
+  color: white !important;
+}
+.p-progressbar-determinate {
+  background-color: #aaa !important;
+}
+.p-progressbar-value {
+  background-color: #00b2ff !important;
+}
+.resultsOption {
+  border: 3px solid #ddd;
+  margin-bottom: 15px;
+  border-radius: 7px;
+  padding: 10px;
+  position: relative;
+}
+.activeOption {
+  border-color: #00b2ff;
+  color: #00b2ff;
+}
+.voteCircle {
+  background-color: #00b2ff;
+  background-color: #d9bd24;
+  width: 65px;
+  height: 65px;
+  border-radius: 80px;
+  color: white;
+  display: flex;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 90%;
+  top: -22px;
+  flex-direction: column;
 }

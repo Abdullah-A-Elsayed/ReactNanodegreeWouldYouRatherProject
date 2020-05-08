@@ -1,9 +1,9 @@
 import React from "react";
-import Answered from "./answeredPoll";
+import Results from "./pollResults";
 import Unanswered from "./unAnsweredPoll";
 import { connect } from "react-redux";
 function Question({ isAnswered, qid }) {
-  return <>{isAnswered ? <Answered qid={qid} /> : <Unanswered qid={qid} />}</>;
+  return <>{isAnswered ? <Results qid={qid} /> : <Unanswered qid={qid} />}</>;
 }
 const mapStateToArgs = ({ authedUser, users }, { match }) => {
   let isAnswered =

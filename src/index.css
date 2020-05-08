@@ -55,3 +55,35 @@ header {
   width: 50px;
   border-radius: 50px;
 }
+.mainContainer {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 50%;
+}
+.homepageTabHeader {
+  width: 50%;
+  margin: 0 !important;
+}
+.homepageTabHeader a {
+  margin: 0 !important;
+  width: 100%;
+}
+li.p-highlight a {
+  background-color: #00b2ff !important;
+}
+.pollHeader {
+  margin: 15px;
+  border-radius: 5px;
+}
+.pollHeaderTitle {
+  padding: 10px;
+  background-color: #eee;
+  font-weight: bold;
+}
+.pollHeaderButton {
+  width: 100%;
+  background-color: white !important;
+  color: #00b2ff !important;
+  font-weight: 500;
+}

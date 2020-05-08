@@ -12,13 +12,13 @@ function HomePage({ answeredPollsIds, UnansweredPollsIds }) {
             headerClassName="homepageTabHeader"
             header="Unanswered Questions"
           >
-            <PollsList polls={answeredPollsIds} />
+            <PollsList polls={UnansweredPollsIds} />
           </TabPanel>
           <TabPanel
             headerClassName="homepageTabHeader"
             header="Answered Questions"
           >
-            <PollsList polls={UnansweredPollsIds} />
+            <PollsList polls={answeredPollsIds} />
           </TabPanel>
         </TabView>
       </Card>

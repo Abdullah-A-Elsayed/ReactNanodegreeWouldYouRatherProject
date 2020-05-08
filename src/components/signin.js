@@ -36,7 +36,7 @@ function Signin({ dispatch, users }) {
                 label="Sign In"
                 icon="pi pi-user"
                 onClick={onSignIn}
-                style={{ width: "70%" }}
+                style={{ width: "70%", backgroundColor: "#00b2ff" }}
               />
             </div>
           </>

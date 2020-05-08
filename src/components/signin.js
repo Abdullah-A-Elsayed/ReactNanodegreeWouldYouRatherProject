@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Card } from "primereact/card";
-import loginImg from "../images/signin.jpg";
 import { Dropdown } from "primereact/dropdown";
 import { connect } from "react-redux";
 import { Button } from "primereact/button";
@@ -14,7 +13,7 @@ function Signin({ dispatch, users }) {
   };
   return (
     <div className="signinCard">
-      <Card header={<img alt="Card" src={loginImg} />}>
+      <Card header={<img alt="Card" src="images/signin.jpg" />}>
         <h3>Pick a user to start the fun ...</h3>
         {Object.keys(users).length > 0 ? (
           <>

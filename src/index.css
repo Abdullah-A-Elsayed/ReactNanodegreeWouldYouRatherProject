@@ -23,6 +23,8 @@ header {
   color: white;
   display: flex;
   justify-content: space-between;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .headerSide {
@@ -47,4 +49,9 @@ header {
 }
 .signout {
   cursor: pointer;
+}
+.headerAvatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
 }

@@ -30,10 +30,11 @@ function Header({ dispatch, authedUser }) {
       </div>
       <div className="headerSide">
         <span className="flexItem">
-          <i className="pi pi-user"></i>
+          {/* <i className="pi pi-user"></i> */}
+          <img src={authedUser.avatarURL} className="headerAvatar" />
         </span>
         <span className="flexItem gold">
-          <h3>{authedUser}</h3>
+          <h3>{authedUser.name}</h3>
         </span>
         <span className="flexItem signout" onClick={signOut}>
           <h3>Sign Out</h3>
@@ -43,4 +44,6 @@ function Header({ dispatch, authedUser }) {
   );
 }
 
-export default connect(({ authedUser }) => ({ authedUser }))(Header);
+export default connect(({ users, authedUser }) => ({
+  authedUser: users[authedUser],
+}))(Header);

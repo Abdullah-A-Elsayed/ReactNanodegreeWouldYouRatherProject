@@ -12,7 +12,7 @@ export default function AuthedContent() {
       <Route exact path="/" component={Homepage} />
       <Route path="/addQuestion" component={AddQuestion} />
       <Route path="/leaderboard" component={Leaderboard} />
-      <Route path="/question/:id" component={Question} />
+      <Route path="/questions/:id" component={Question} />
     </>
   );
 }

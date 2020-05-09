@@ -29,7 +29,7 @@ function PollHeader({ authorName, authorAvatar, pollText, qid }) {
               <Button
                 label="View Poll"
                 className="pollHeaderButton"
-                onClick={() => history.push("/question/" + qid)}
+                onClick={() => history.push("/questions/" + qid)}
               />
             </div>
           </div>

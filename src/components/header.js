@@ -18,7 +18,7 @@ function Header({ dispatch, authedUser }) {
           </NavLink>
         </span>
         <span className="flexItem">
-          <NavLink to="/addQuestion" className="navlink">
+          <NavLink to="/add" className="navlink">
             <h3>Add Question</h3>
           </NavLink>
         </span>

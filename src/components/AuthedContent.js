@@ -13,7 +13,7 @@ export default function AuthedContent() {
       <Header />
       <Switch>
         <Route exact path="/" component={Homepage} />
-        <Route path="/addQuestion" component={AddQuestion} />
+        <Route path="/add" component={AddQuestion} />
         <Route path="/leaderboard" component={Leaderboard} />
         <Route path="/questions/:id" component={Question} />
         <Route path="*" component={NotFound} />

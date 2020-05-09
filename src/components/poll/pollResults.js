@@ -22,7 +22,11 @@ function pollResults({
       >
         <div style={{ display: "flex" }}>
           <div className="mediumAvatarConatainer">
-            <img src={authorAvatar} className="mediumUserAvatar" />
+            <img
+              src={authorAvatar}
+              className="mediumUserAvatar"
+              alt={authorName}
+            />
           </div>
           <div style={{ width: "70%", padding: "20px" }}>
             <h3>Results:</h3>

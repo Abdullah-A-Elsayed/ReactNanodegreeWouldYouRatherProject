@@ -6,11 +6,11 @@ body {
   padding: 0;
 }
 .signinCard {
-  width: 600px;
+  width: 700px;
   margin: 5% auto;
 }
 .signinCard img {
-  height: 180px;
+  height: 220px;
 }
 .center {
   text-align: center;

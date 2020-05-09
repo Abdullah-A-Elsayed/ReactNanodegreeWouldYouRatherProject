@@ -4,7 +4,7 @@ import { RadioButton } from "primereact/radiobutton";
 import { Button } from "primereact/button";
 import { connect } from "react-redux";
 import { handleAnswerPoll } from "../../actions/shared";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 function AnsweredPoll({
   dispatch,
   authedUser,
@@ -15,12 +15,12 @@ function AnsweredPoll({
   authorAvatar,
 }) {
   const [selectedOption, setSelectedOption] = useState("optionOne");
-  const history = useHistory();
+  // const history = useHistory();
   const onPollSubmit = (e) => {
     e.preventDefault();
     if (!selectedOption) return alert("Choosing an option is required");
     dispatch(handleAnswerPoll({ authedUser, qid, answer: selectedOption }));
-    history.push("/");
+    // history.push("/"); //keep him in the same route to see the results
   };
   return (
     <div className="mainContainer">

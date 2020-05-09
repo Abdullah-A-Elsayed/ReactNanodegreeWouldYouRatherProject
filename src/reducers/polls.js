@@ -5,7 +5,6 @@ export default function (state = {}, action) {
     case RECEIVE_POLLS:
       return action.polls;
     case USER_ANSWERS_POLL:
-      console.log(state[action.poll.id][action.poll.option]["votes"]);
       return {
         ...state,
         [action.poll.id]: {

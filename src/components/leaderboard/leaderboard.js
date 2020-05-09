@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import User from "./user";
 function Leaderboard({ users }) {
-  console.log(users);
   return (
     <div className="mainContainer">
       {users &&
